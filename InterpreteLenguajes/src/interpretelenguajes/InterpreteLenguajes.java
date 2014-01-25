@@ -6,17 +6,23 @@
 
 package interpretelenguajes;
 
-/**
+import java.lang.Exception;
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+
+/*
  *
  * @author TOSHIBA
  */
-public class InterpreteLenguajes {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class InterpreteLenguajes{
     
+    public static void main(String[] args) throws Exception {
+        
+        proyectoLenguajesLexer lexer = new proyectoLenguajesLexer(new ANTLRFileStream("C:\\Users\\TOSHIBA\\Documents\\NetBeansProjects\\InterpreteLenguajes\\InterpreteLenguajes\\src\\interpretelenguajes\\test.proyectoLenguajes"));
+        proyectoLenguajesParser parser = new proyectoLenguajesParser(new CommonTokenStream(lexer));
+        ParseTree tree = parser.parse();
+        EvalVisitor visitor = new EvalVisitor();
+        visitor.visit(tree);
+    } 
 }
