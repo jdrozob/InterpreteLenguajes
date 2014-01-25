@@ -1,82 +1,337 @@
-// Generated from proyectoLenguajes.g4 by ANTLR 4.0
+// Generated from C:\Users\TOSHIBA\Documents\NetBeansProjects\InterpreteLenguajes\InterpreteLenguajes\src\interpretelenguajes\proyectoLenguajes.g4 by ANTLR 4.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
-import org.antlr.v4.runtime.Token;
-import org.antlr.v4.runtime.tree.TerminalNode;
+import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ErrorNode;
+import org.antlr.v4.runtime.tree.TerminalNode;
 
+/**
+ * This class provides an empty implementation of {@link proyectoLenguajesListener},
+ * which can be extended to create a listener which only needs to handle a subset
+ * of the available methods.
+ */
 public class proyectoLenguajesBaseListener implements proyectoLenguajesListener {
-	@Override public void enterStat_block(proyectoLenguajesParser.Stat_blockContext ctx) { }
-	@Override public void exitStat_block(proyectoLenguajesParser.Stat_blockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterStat_block(@NotNull proyectoLenguajesParser.Stat_blockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitStat_block(@NotNull proyectoLenguajesParser.Stat_blockContext ctx) { }
 
-	@Override public void enterFor_stat(proyectoLenguajesParser.For_statContext ctx) { }
-	@Override public void exitFor_stat(proyectoLenguajesParser.For_statContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterFor_stat(@NotNull proyectoLenguajesParser.For_statContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitFor_stat(@NotNull proyectoLenguajesParser.For_statContext ctx) { }
 
-	@Override public void enterPrint_stat(proyectoLenguajesParser.Print_statContext ctx) { }
-	@Override public void exitPrint_stat(proyectoLenguajesParser.Print_statContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterPrint_stat(@NotNull proyectoLenguajesParser.Print_statContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitPrint_stat(@NotNull proyectoLenguajesParser.Print_statContext ctx) { }
 
-	@Override public void enterBlock(proyectoLenguajesParser.BlockContext ctx) { }
-	@Override public void exitBlock(proyectoLenguajesParser.BlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterBlock(@NotNull proyectoLenguajesParser.BlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitBlock(@NotNull proyectoLenguajesParser.BlockContext ctx) { }
 
-	@Override public void enterAtomExpr(proyectoLenguajesParser.AtomExprContext ctx) { }
-	@Override public void exitAtomExpr(proyectoLenguajesParser.AtomExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterAtomExpr(@NotNull proyectoLenguajesParser.AtomExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitAtomExpr(@NotNull proyectoLenguajesParser.AtomExprContext ctx) { }
 
-	@Override public void enterLtExpr(proyectoLenguajesParser.LtExprContext ctx) { }
-	@Override public void exitLtExpr(proyectoLenguajesParser.LtExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterLtExpr(@NotNull proyectoLenguajesParser.LtExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitLtExpr(@NotNull proyectoLenguajesParser.LtExprContext ctx) { }
 
-	@Override public void enterPlusExpr(proyectoLenguajesParser.PlusExprContext ctx) { }
-	@Override public void exitPlusExpr(proyectoLenguajesParser.PlusExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterPlusExpr(@NotNull proyectoLenguajesParser.PlusExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitPlusExpr(@NotNull proyectoLenguajesParser.PlusExprContext ctx) { }
 
-	@Override public void enterStringAtom(proyectoLenguajesParser.StringAtomContext ctx) { }
-	@Override public void exitStringAtom(proyectoLenguajesParser.StringAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterStringAtom(@NotNull proyectoLenguajesParser.StringAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitStringAtom(@NotNull proyectoLenguajesParser.StringAtomContext ctx) { }
 
-	@Override public void enterLteqExpr(proyectoLenguajesParser.LteqExprContext ctx) { }
-	@Override public void exitLteqExpr(proyectoLenguajesParser.LteqExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterLteqExpr(@NotNull proyectoLenguajesParser.LteqExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitLteqExpr(@NotNull proyectoLenguajesParser.LteqExprContext ctx) { }
 
-	@Override public void enterNumberAtom(proyectoLenguajesParser.NumberAtomContext ctx) { }
-	@Override public void exitNumberAtom(proyectoLenguajesParser.NumberAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterNumberAtom(@NotNull proyectoLenguajesParser.NumberAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitNumberAtom(@NotNull proyectoLenguajesParser.NumberAtomContext ctx) { }
 
-	@Override public void enterStat(proyectoLenguajesParser.StatContext ctx) { }
-	@Override public void exitStat(proyectoLenguajesParser.StatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterStat(@NotNull proyectoLenguajesParser.StatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitStat(@NotNull proyectoLenguajesParser.StatContext ctx) { }
 
-	@Override public void enterBooleanAtom(proyectoLenguajesParser.BooleanAtomContext ctx) { }
-	@Override public void exitBooleanAtom(proyectoLenguajesParser.BooleanAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterBooleanAtom(@NotNull proyectoLenguajesParser.BooleanAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitBooleanAtom(@NotNull proyectoLenguajesParser.BooleanAtomContext ctx) { }
 
-	@Override public void enterParExpr(proyectoLenguajesParser.ParExprContext ctx) { }
-	@Override public void exitParExpr(proyectoLenguajesParser.ParExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterParExpr(@NotNull proyectoLenguajesParser.ParExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitParExpr(@NotNull proyectoLenguajesParser.ParExprContext ctx) { }
 
-	@Override public void enterMinusExpr(proyectoLenguajesParser.MinusExprContext ctx) { }
-	@Override public void exitMinusExpr(proyectoLenguajesParser.MinusExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterMinusExpr(@NotNull proyectoLenguajesParser.MinusExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitMinusExpr(@NotNull proyectoLenguajesParser.MinusExprContext ctx) { }
 
-	@Override public void enterAssignment(proyectoLenguajesParser.AssignmentContext ctx) { }
-	@Override public void exitAssignment(proyectoLenguajesParser.AssignmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterAssignment(@NotNull proyectoLenguajesParser.AssignmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitAssignment(@NotNull proyectoLenguajesParser.AssignmentContext ctx) { }
 
-	@Override public void enterIdAtom(proyectoLenguajesParser.IdAtomContext ctx) { }
-	@Override public void exitIdAtom(proyectoLenguajesParser.IdAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterIdAtom(@NotNull proyectoLenguajesParser.IdAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitIdAtom(@NotNull proyectoLenguajesParser.IdAtomContext ctx) { }
 
-	@Override public void enterGteqExpr(proyectoLenguajesParser.GteqExprContext ctx) { }
-	@Override public void exitGteqExpr(proyectoLenguajesParser.GteqExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterGteqExpr(@NotNull proyectoLenguajesParser.GteqExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitGteqExpr(@NotNull proyectoLenguajesParser.GteqExprContext ctx) { }
 
-	@Override public void enterGtExpr(proyectoLenguajesParser.GtExprContext ctx) { }
-	@Override public void exitGtExpr(proyectoLenguajesParser.GtExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterGtExpr(@NotNull proyectoLenguajesParser.GtExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitGtExpr(@NotNull proyectoLenguajesParser.GtExprContext ctx) { }
 
-	@Override public void enterCondition_block(proyectoLenguajesParser.Condition_blockContext ctx) { }
-	@Override public void exitCondition_block(proyectoLenguajesParser.Condition_blockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterCondition_block(@NotNull proyectoLenguajesParser.Condition_blockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitCondition_block(@NotNull proyectoLenguajesParser.Condition_blockContext ctx) { }
 
-	@Override public void enterNeqExpr(proyectoLenguajesParser.NeqExprContext ctx) { }
-	@Override public void exitNeqExpr(proyectoLenguajesParser.NeqExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterNeqExpr(@NotNull proyectoLenguajesParser.NeqExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitNeqExpr(@NotNull proyectoLenguajesParser.NeqExprContext ctx) { }
 
-	@Override public void enterParse(proyectoLenguajesParser.ParseContext ctx) { }
-	@Override public void exitParse(proyectoLenguajesParser.ParseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterParse(@NotNull proyectoLenguajesParser.ParseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitParse(@NotNull proyectoLenguajesParser.ParseContext ctx) { }
 
-	@Override public void enterEqExpr(proyectoLenguajesParser.EqExprContext ctx) { }
-	@Override public void exitEqExpr(proyectoLenguajesParser.EqExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterEqExpr(@NotNull proyectoLenguajesParser.EqExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitEqExpr(@NotNull proyectoLenguajesParser.EqExprContext ctx) { }
 
-	@Override public void enterIf_stat(proyectoLenguajesParser.If_statContext ctx) { }
-	@Override public void exitIf_stat(proyectoLenguajesParser.If_statContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterIf_stat(@NotNull proyectoLenguajesParser.If_statContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitIf_stat(@NotNull proyectoLenguajesParser.If_statContext ctx) { }
 
-	@Override public void enterEveryRule(ParserRuleContext ctx) { }
-	@Override public void exitEveryRule(ParserRuleContext ctx) { }
-	@Override public void visitTerminal(TerminalNode node) { }
-	@Override public void visitErrorNode(ErrorNode node) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void enterEveryRule(@NotNull ParserRuleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void exitEveryRule(@NotNull ParserRuleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void visitTerminal(@NotNull TerminalNode node) { }
+	/**
+	 * {@inheritDoc}
+	 * <p/>
+	 * The default implementation does nothing.
+	 */
+	@Override public void visitErrorNode(@NotNull ErrorNode node) { }
 }
