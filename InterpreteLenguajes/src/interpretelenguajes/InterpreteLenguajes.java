@@ -7,6 +7,8 @@
 package interpretelenguajes;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.antlr.v4.runtime.ANTLRFileStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -16,7 +18,9 @@ import org.antlr.v4.runtime.tree.ParseTree;
  * @author TOSHIBA
  */
 public class InterpreteLenguajes extends javax.swing.JFrame {
-
+    
+    EvalVisitor visitor = new EvalVisitor();
+    
     /**
      * Creates new form Interfaz
      */
@@ -54,8 +58,18 @@ public class InterpreteLenguajes extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea_Salida);
 
         jButton_Run.setText("Run");
+        jButton_Run.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_RunActionPerformed(evt);
+            }
+        });
 
         jButton_Clean.setText("Clean");
+        jButton_Clean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_CleanActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,19 +104,26 @@ public class InterpreteLenguajes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_RunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RunActionPerformed
+        try {
+            correrInterprete();
+        } catch (IOException ex) {
+            Logger.getLogger(InterpreteLenguajes.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton_RunActionPerformed
+
+    private void jButton_CleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CleanActionPerformed
+        //A continuacion se limpia la pantalla de resultados:
+        visitor.setStrProceso("");
+        visitor.setLine(0);
+        jTextArea_Salida.setText(visitor.getStrProceso());
+    }//GEN-LAST:event_jButton_CleanActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) throws IOException {
-        
-        //Proceso del Interprete
-        proyectoLenguajesLexer lexer = new proyectoLenguajesLexer(new ANTLRFileStream("C:\\Users\\TOSHIBA\\Documents\\NetBeansProjects\\InterpreteLenguajes\\InterpreteLenguajes\\src\\interpretelenguajes\\test.proyectoLenguajes"));
-        proyectoLenguajesParser parser = new proyectoLenguajesParser(new CommonTokenStream(lexer));
-        ParseTree tree = parser.parse();
-        EvalVisitor visitor = new EvalVisitor();
-        visitor.visit(tree);
-        
-        
+    public static void main(String args[]) throws IOException {       
+                
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new InterpreteLenguajes().setVisible(true);
@@ -116,6 +137,19 @@ public class InterpreteLenguajes extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea_Input;
-    private javax.swing.JTextArea jTextArea_Salida;
+    public javax.swing.JTextArea jTextArea_Salida;
     // End of variables declaration//GEN-END:variables
+
+    private void correrInterprete() throws IOException {
+        //Proceso del Interprete
+        proyectoLenguajesLexer lexer = new proyectoLenguajesLexer(new ANTLRFileStream("C:\\Users\\TOSHIBA\\Documents\\NetBeansProjects\\InterpreteLenguajes\\InterpreteLenguajes\\src\\interpretelenguajes\\test.proyectoLenguajes"));
+        proyectoLenguajesParser parser = new proyectoLenguajesParser(new CommonTokenStream(lexer));
+        ParseTree tree = parser.parse();
+        //EvalVisitor visitor = new EvalVisitor();
+        visitor.visit(tree); 
+        
+        //Aqui se muestran los resultados del interprete, el resultado se obtiene
+        //de la clase EvalVisitor, se obtienen de la variable que guarda el proceso.
+        jTextArea_Salida.setText(visitor.getStrProceso());
+    }
 }

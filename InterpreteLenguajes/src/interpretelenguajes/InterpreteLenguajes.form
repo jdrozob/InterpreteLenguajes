@@ -84,6 +84,9 @@
               <Color id="Cursor Por defecto"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
@@ -91,11 +94,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Run"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_RunActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton_Clean">
       <Properties>
         <Property name="text" type="java.lang.String" value="Clean"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_CleanActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
