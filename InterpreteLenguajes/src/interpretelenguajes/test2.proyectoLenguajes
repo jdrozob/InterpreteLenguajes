@@ -1,0 +1,21 @@
+s1 = " bottles of beer on the wall";
+s2 = "Take one down and pass it around, ";
+s3 = "Go to the store and buy some more, ";
+s4 = " bottle of beer on the wall";
+s5 = " bottles of beer";
+s6 = " bottle of beer";
+
+n = 10;
+m = 0;
+	
+	if n > 1{
+        	n = n - 1;
+    	}
+
+	elif n == 1{
+        	m = n;
+    	}
+    
+	else{
+		m = 99;
+	}

@@ -20,12 +20,12 @@ public class proyectoLenguajesParser extends Parser {
 		ASSIGN=1, SCOL=2, OPAR=3, CPAR=4, OBRACE=5, CBRACE=6, COMA=7, IF=8, ELSEIF=9, 
 		ELSE=10, FOR=11, IN=12, RANGE=13, PRINT=14, TRUE=15, FALSE=16, EQ=17, 
 		NEQ=18, GT=19, LT=20, GTEQ=21, LTEQ=22, PLUS=23, MINUS=24, ID=25, INT=26, 
-		FLOAT=27, STRING=28, ESC_SEQ=29, OCTAL_ESC=30, UNICODE_ESC=31, HEX_DIGIT=32;
+		FLOAT=27, STRING=28, COMMENT=29, SPACE=30, OTHER=31;
 	public static final String[] tokenNames = {
 		"<INVALID>", "'='", "';'", "'('", "')'", "'{'", "'}'", "','", "'if'", 
 		"'elif'", "'else'", "'for'", "'in'", "'range'", "'print'", "'true'", "'false'", 
 		"'=='", "'!='", "'>'", "'<'", "'>='", "'<='", "'+'", "'-'", "ID", "INT", 
-		"FLOAT", "STRING", "ESC_SEQ", "OCTAL_ESC", "UNICODE_ESC", "HEX_DIGIT"
+		"FLOAT", "STRING", "COMMENT", "SPACE", "OTHER"
 	};
 	public static final int
 		RULE_parse = 0, RULE_block = 1, RULE_stat = 2, RULE_assignment = 3, RULE_if_stat = 4, 
@@ -1157,7 +1157,7 @@ public class proyectoLenguajesParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3\"\u0081\4\2\t\2\4"+
+		"\3\uacf5\uee8c\u4f5d\u8b0d\u4a45\u78bd\u1b2f\u3378\3!\u0081\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\3\2\3\2\3\2\3\3\7\3\35\n\3\f\3\16\3 \13\3\3\4\3\4\3\4\3\4"+
 		"\5\4&\n\4\3\5\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\7\6\61\n\6\f\6\16\6\64\13"+

@@ -105,24 +105,18 @@ FLOAT
     ;
 
 STRING
-    :  '"' ( ESC_SEQ | ~('\\'|'"') )* '"'
-    ;
+ : '"' (~["\r\n] | '""')* '"'
+ ;
 
-ESC_SEQ
-    :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
-    |   UNICODE_ESC
-    |   OCTAL_ESC
-    ;
+COMMENT
+ : '#' ~[\r\n]* -> skip
+ ;
 
-OCTAL_ESC
-    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7')
-    ;
+SPACE
+ : [ \t\r\n] -> skip
+ ;
 
-UNICODE_ESC
-    :   '\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
-    ;
-    
-HEX_DIGIT : ('0'..'9'|'a'..'f'|'A'..'F') ;
+OTHER
+ : . 
+ ;
 

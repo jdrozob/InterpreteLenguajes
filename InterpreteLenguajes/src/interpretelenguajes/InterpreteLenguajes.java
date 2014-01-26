@@ -19,7 +19,7 @@ public class InterpreteLenguajes{
     
     public static void main(String[] args) throws Exception {
         
-        proyectoLenguajesLexer lexer = new proyectoLenguajesLexer(new ANTLRFileStream("C:\\Users\\TOSHIBA\\Documents\\NetBeansProjects\\InterpreteLenguajes\\InterpreteLenguajes\\src\\interpretelenguajes\\test.proyectoLenguajes"));
+        proyectoLenguajesLexer lexer = new proyectoLenguajesLexer(new ANTLRFileStream("C:\\Users\\TOSHIBA\\Documents\\NetBeansProjects\\InterpreteLenguajes\\InterpreteLenguajes\\src\\interpretelenguajes\\test2.proyectoLenguajes"));
         proyectoLenguajesParser parser = new proyectoLenguajesParser(new CommonTokenStream(lexer));
         ParseTree tree = parser.parse();
         EvalVisitor visitor = new EvalVisitor();
