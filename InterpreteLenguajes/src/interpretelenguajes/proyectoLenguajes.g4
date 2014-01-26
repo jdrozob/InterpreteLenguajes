@@ -42,7 +42,7 @@ for_stat
  ;
 
 print_stat
- : PRINT (ID|STRING) (PLUS(ID|STRING))* SCOL  
+ : PRINT expr SCOL  
  ;
 
 expr
