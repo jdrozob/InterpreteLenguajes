@@ -16,12 +16,7 @@ public class EvalVisitor extends proyectoLenguajesBaseVisitor<Value> {
     
     //Variables de control:
     String strProceso = "";
-    int line = 0;
-
-    public void setLine(int line) {
-        this.line = line;
-    }
-
+   
     public void setStrProceso(String strProceso) {
         this.strProceso = strProceso;
     }
@@ -202,10 +197,9 @@ public class EvalVisitor extends proyectoLenguajesBaseVisitor<Value> {
   @Override
   public Value visitPrint_stat(proyectoLenguajesParser.Print_statContext ctx) {
         Value value = this.visit(ctx.expr());
-        line = line + 1;
         //System.out.println(value);
         //Aqui se guarda el proceso en una variable para mostrar en la interfaz:
-        strProceso += line + ".     " + value + "\n";
+        strProceso += value + "\n";
         return value;
   }
 }

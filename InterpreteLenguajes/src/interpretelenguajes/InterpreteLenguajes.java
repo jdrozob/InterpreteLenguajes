@@ -6,6 +6,8 @@
 
 package interpretelenguajes;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,7 +21,18 @@ import org.antlr.v4.runtime.tree.ParseTree;
  */
 public class InterpreteLenguajes extends javax.swing.JFrame {
     
+    //Variables
     EvalVisitor visitor = new EvalVisitor();
+    String strEntrada = "";
+    File archivo=new File("Instrucciones.proyectoLenguajes");
+
+    public String getStrEntrada() {
+        return strEntrada;
+    }
+
+    public void setStrEntrada(String strEntrada) {
+        this.strEntrada = strEntrada;
+    }
     
     /**
      * Creates new form Interfaz
@@ -45,6 +58,7 @@ public class InterpreteLenguajes extends javax.swing.JFrame {
         jButton_Clean = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Interpreted Language");
         setResizable(false);
 
         jTextArea_Input.setColumns(20);
@@ -113,10 +127,12 @@ public class InterpreteLenguajes extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_RunActionPerformed
 
     private void jButton_CleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CleanActionPerformed
-        //A continuacion se limpia la pantalla de resultados:
+        //A continuacion se limpian las variables y la pantalla de resultados:
+        strEntrada = "";
         visitor.setStrProceso("");
-        visitor.setLine(0);
         jTextArea_Salida.setText(visitor.getStrProceso());
+        jTextArea_Input.setText(strEntrada);
+        archivo.delete();
     }//GEN-LAST:event_jButton_CleanActionPerformed
 
     /**
@@ -141,8 +157,13 @@ public class InterpreteLenguajes extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void correrInterprete() throws IOException {
+        
+        //Obteniendo el texto de la interfaz de entrada y creando fichero de instrucciones:
+        strEntrada = jTextArea_Input.getText();
+        crearFichero(strEntrada);
+        
         //Proceso del Interprete
-        proyectoLenguajesLexer lexer = new proyectoLenguajesLexer(new ANTLRFileStream("C:\\Users\\TOSHIBA\\Documents\\NetBeansProjects\\InterpreteLenguajes\\InterpreteLenguajes\\src\\interpretelenguajes\\test.proyectoLenguajes"));
+        proyectoLenguajesLexer lexer = new proyectoLenguajesLexer(new ANTLRFileStream("Instrucciones.proyectoLenguajes"));
         proyectoLenguajesParser parser = new proyectoLenguajesParser(new CommonTokenStream(lexer));
         ParseTree tree = parser.parse();
         //EvalVisitor visitor = new EvalVisitor();
@@ -151,5 +172,19 @@ public class InterpreteLenguajes extends javax.swing.JFrame {
         //Aqui se muestran los resultados del interprete, el resultado se obtiene
         //de la clase EvalVisitor, se obtienen de la variable que guarda el proceso.
         jTextArea_Salida.setText(visitor.getStrProceso());
+        //jTextArea_Salida.setText(strEntrada);
+    }
+
+    private void crearFichero(String Entrada) {
+        try{
+            //File archivo=new File("Instrucciones.proyectoLenguajes");
+            FileWriter escribir=new FileWriter(archivo,true);
+            escribir.write(Entrada);
+            escribir.close();
+        }
+       
+        catch(Exception e){
+            System.out.println("Error al escribir");
+        }
     }
 }
