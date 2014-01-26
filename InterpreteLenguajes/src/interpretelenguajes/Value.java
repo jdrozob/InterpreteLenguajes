@@ -24,7 +24,7 @@ public class Value {
   }
 
   public Double asDouble() {
-  return (Double)value;
+  return Double.parseDouble(value.toString());
   }
 
   public String asString() {

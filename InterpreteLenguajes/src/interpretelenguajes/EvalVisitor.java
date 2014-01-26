@@ -167,14 +167,27 @@ public class EvalVisitor extends proyectoLenguajesBaseVisitor<Value> {
   // for override
   @Override
   public Value visitFor_stat(proyectoLenguajesParser.For_statContext ctx) {
+  
+  String id = ctx.ID().getText();
+  
+  int desde = Integer.parseInt(ctx.INT(0).getText());
+  int hasta = Integer.parseInt(ctx.INT(1).getText());
 
-  Value desde = this.visit(ctx.INT(0));
-  Value hasta = this.visit(ctx.INT(1));
-   
-  for(double i=desde.asDouble(); i<hasta.asDouble(); i++){
-  this.visit(ctx.stat_block());
+  for(int i=desde; i<hasta; i++){
+    Value value = new Value(i);
+    memory.put(id, value);
+    this.visit(ctx.stat_block());
   }  
 
   return Value.VOID;
   }
+  
+  // for override
+  @Override
+  public Value visitPrint_stat(proyectoLenguajesParser.Print_statContext ctx) {
+        Value value = this.visit(ctx.expr());
+        System.out.println(value);
+        return value;
+  }
 }
+

@@ -7,7 +7,7 @@ s6 = " bottle of beer";
 
 for k in range(1, 101){
 	
-	n = 100 - k;
+	n = 100-k;
 	
 	if n > 1{
         
@@ -16,22 +16,22 @@ for k in range(1, 101){
         	
 		if m > 1{
 	    
-			print s2 + m + s1 + ".\n";
+			print s2 + m + s1;
 	    	}
         	else{
-	    		print s2 + m + s4 + ".\n";
+	    		print s2 + m + s4;
 	    	}
     	}
 
 	elif n == 1{
 
         	print n + s4 + ", " + n + s6 + ".";
-        	print s2 + "no more" + s1  + ".\n";
+        	print s2 + "no more" + s1;
     	}
     
 	else{
         	print "No more" + s1 + ", no more" + s5 + ".";
 		m = 99;
-		print s3 + m + s1 + ".\n";
+		print s3 + m + s1;
 	}
 }
