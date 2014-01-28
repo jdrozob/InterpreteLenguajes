@@ -108,15 +108,9 @@ STRING
  : '"' (~["\r\n] | '""')* '"'
  ;
 
-COMMENT
- : '#' ~[\r\n]* -> skip
- ;
-
 SPACE
  : [ \t\r\n] -> skip
  ;
 
-OTHER
- : . 
- ;
+
 
